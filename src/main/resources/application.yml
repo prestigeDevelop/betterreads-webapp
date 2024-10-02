@@ -1,34 +1,39 @@
 spring:
   application:
     name: betterreads
+
   security:
     oauth2:
       client:
         registration:
           github:
-            client-id: Iv1.a9958b0f68563669
-            client-secret: 41655317cc2302b59792654751682e7e6e2817cd
+            client-id: Iv1.a72506673f34a64e
+            client-secret: 4760ab42b382a061d3e88630b3dbb9ef807911da
   data:
     cassandra:
       keyspace-name: main
-      username: lkxYZbvfGxNffEhWqCxiZjzL
-      password: MmxOe-mwE2pL2JiAkoeHfmDH+l9vcJPejF6nwaEQA3A3trUBAOE0I8uQ8QqZ4sj7E2y++4OrCxav3C,_+3wI3Efp0fiD40acdHdEg2eZk1JfZvTDhL97zCKoSd7YZw2Z
-      schema-action: create-if-not-exists
+      username: qsRxkFpiJJfiEAtkYDPewTbG
+      password: pd7-fARu2-BUNXSlIuCHoshhasxTfqjQvwRi6z.nP_sQTIc,3+NZ.12ljqb-fg7DjNWcs_5sTvZevgM+7CGLcxvmqMW2HPZR,t0MBzoZnFOL9DmZZMt_fW5mBSXJQ_Kk
+      schema-action: CREATE_IF_NOT_EXISTS
+      consistency: ONE
       request:
-        timeout: 10s
+        timeout: 100s
       connection:
         connect-timeout: 10s
         init-query-timeout: 10s
 
-
-
 datastax.astra:
-    secure-connect-bundle: secure-connect.zip
-
+  secure-connect-bundle: secure-connect-betterreadsdb.zip
 
 astra.db:
-    id: a9bbac6a-85b4-44bd-8f56-4289107ee9b6
-    region: us-west1
-    keyspace: main
-    application.token: AstraCS:lkxYZbvfGxNffEhWqCxiZjzL:66d7b0087587ea5a761778c1fe4d5ac4fed91db4f21817d88dbec4e2641b79f4
-
+  id: e836fa70-7218-4d2e-82e4-00ea081ebc36
+  region: us-east1
+  keyspace: main
+  application.token: AstraCS:qsRxkFpiJJfiEAtkYDPewTbG:34aeb181aaf91d361e73313de31cff5e28a8b4bf73ab597a2cfecef1e18e0e65
+betterreads:
+  maxBooksToDisplay: 20
+#  {
+#    "clientId": "qsRxkFpiJJfiEAtkYDPewTbG",
+#    "secret": "pd7-fARu2-BUNXSlIuCHoshhasxTfqjQvwRi6z.nP_sQTIc,3+NZ.12ljqb-fg7DjNWcs_5sTvZevgM+7CGLcxvmqMW2HPZR,t0MBzoZnFOL9DmZZMt_fW5mBSXJQ_Kk",
+#    "token": "AstraCS:qsRxkFpiJJfiEAtkYDPewTbG:34aeb181aaf91d361e73313de31cff5e28a8b4bf73ab597a2cfecef1e18e0e65"
+#  }

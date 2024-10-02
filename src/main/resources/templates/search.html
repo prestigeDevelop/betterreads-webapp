@@ -31,7 +31,7 @@
       <div th:insert="components/book-search :: search-panel"></div>
       
       <section class="content">
-        
+        <div>Showing <span th:text="${maxBooksToDisplay}"/> result out of <span th:text="${numFound}"/></div>
 
 
         <div class="card-group">
